@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: slopesense-ai
+    env: docker
+    plan: free
+    region: singapore
+    dockerfilePath: Dockerfile
+    healthCheckPath: /api/v1/health
+    envVars:
+      - key: PORT
+        value: 10000
